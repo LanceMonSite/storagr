@@ -1,0 +1,176 @@
+// Global Foundation Settings
+@import "settings";
+@import "compass/css3";
+// Comment out this import if you are customizing you imports below
+@import "foundation";
+
+// Import specific parts of Foundation by commenting the import "foundation"
+// and uncommenting what you want below. You must uncomment the following if customizing
+
+$topbar-dropdown-bg: #274C74;
+$topbar-link-color: #fff;
+// @import "foundation/foundation-global";
+// @import "foundation/components/grid";
+// @import "foundation/components/visibility";
+// @import "foundation/components/block-grid";
+// @import "foundation/components/type";
+// @import "foundation/components/buttons";
+// @import "foundation/components/forms";
+// @import "foundation/components/custom-forms";
+// @import "foundation/components/button-groups";
+// @import "foundation/components/dropdown-buttons";
+// @import "foundation/components/split-buttons";
+// @import "foundation/components/flex-video";
+// @import "foundation/components/section";
+// @import "foundation/components/top-bar";
+// @import "foundation/components/orbit";
+// @import "foundation/components/reveal";
+// @import "foundation/components/joyride";
+// @import "foundation/components/clearing";
+// @import "foundation/components/alert-boxes";
+// @import "foundation/components/breadcrumbs";
+// @import "foundation/components/keystrokes";
+// @import "foundation/components/labels";
+// @import "foundation/components/inline-lists";
+// @import "foundation/components/pagination";
+// @import "foundation/components/panels";
+// @import "foundation/components/pricing-tables";
+// @import "foundation/components/progress-bars";
+// @import "foundation/components/side-nav";
+// @import "foundation/components/sub-nav";
+// @import "foundation/components/switch";
+// @import "foundation/components/magellan";
+// @import "foundation/components/tables";
+// @import "foundation/components/thumbs";
+// @import "foundation/components/tooltips";
+// @import "foundation/components/dropdown";
+
+/*****
+*	
+*/
+body{
+	background: image-url('attic-main.jpg') no-repeat center center fixed;
+	@include background-size(cover);
+}
+h1, h3, h2{
+	font-family:  $body-font-family;
+	text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+	color: #333;
+}
+.relative{
+	position: relative;
+}
+.centered{
+	text-align: center;
+}
+.logo{
+	span{
+	background: image-url('logo.png') no-repeat;
+	height: image-height('logo.png') + 10px;
+	width: image-width('logo.png');
+	display: block;
+	background-position: 0 50%;
+	}
+}
+.search-button{
+	@include button;
+	$bg: $primary-color;
+}
+.icon-search{
+	background: image-url('icon-search.png') no-repeat 50% 50%;
+	width: image-width('icon-search.png');
+	height: image-height('icon-search.png');
+	display: block;
+}
+.postfix.radius{
+	font-size: 23px;
+	width: 100%;
+	padding: 15px 0;
+	@include button-base;
+	@include button-style($primary-color);
+	border-color: $primary-color;
+	&:hover{
+	}
+}
+.home-pic{
+	height: 550px;
+	margin: 0 auto;
+	width: 100%;
+	input{
+		font-size: 23px;
+	}
+}
+.top-bar{
+}
+
+.menu-icon{
+	a{
+
+	}
+}
+.home-msg{
+	padding: 150px 0 0 0;
+	h1{
+		background-color: rgba(#274c74, 0.3);
+
+	}
+}
+.centered span{
+	background-color: rgba(#edb90a, 0.8);
+	padding: 0 3px;
+	color: #fff;
+}
+.how-it-works{
+	padding: 25px 0;
+	img{
+		margin: 0 auto
+	}
+	h4{
+		text-align: center;
+	}
+	p{
+		text-align: center;
+	}
+}
+.footer-link{
+	margin: 100px 0;
+	a{
+		text-decoration: underline;
+		color: #fff;
+	}
+}
+@media #{$topbar-media-query} {
+	body{
+	background: image-url('attic-main.jpg') no-repeat center -310px fixed;
+	@include background-size(cover);
+	}
+	.home-msg{
+	padding: 300px 0 0 0;
+	}
+	.home-pic{
+	height: 660px;
+	margin: 0 auto;
+	width: 100%;
+
+		input{
+			font-size: 23px;
+		}	
+	}
+	.top-bar-section ul{
+		height: 47px !important;
+		margin: 11px 0;
+	}
+	.top-bar-section li a:not(.button){
+		line-height: 45px;
+	}
+	ul li{
+	& > a{
+		background: $topbar-dropdown-bg !important;
+		color: $topbar-link-color !important;
+		&:hover{
+			background: $primary-color !important;
+			color: #fff !important;
+		}
+	}
+}
+}
