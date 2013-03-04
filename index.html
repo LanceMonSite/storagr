@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="css/normalize.css" />
         <link rel="stylesheet" href="css/app.css" />
         <link rel="stylesheet" href="css/custom.css" />
+        <script src='https://cdn.firebase.com/v0/firebase.js'></script>
     </head>
     <body>
         <div class="row">
@@ -21,23 +22,19 @@
                             <a href="#"><span></span> </a>
                         </li>
                         <section class="top-bar-section">
-                            
-                                <ul class="right">
-                                    
-                                    <li class="divider hide-for-small"></li>
-                                    <li><a href="#">List your space</a></li>
-                                    <li class="divider hide-for-small"></li>
-                                    <li><a href="#">Sign in</a></li>
-                                  
-                                </ul>
-                            
+                            <ul class="right">
+                                <li class="divider hide-for-small"></li>
+                                <li><a href="#">List your space</a></li>
+                                <li class="divider hide-for-small"></li>
+                                <li><a href="#">Sign in</a></li>
+                            </ul>
                         </section>
                     </ul>
                 </nav>
             </div>
         </div>
         <section class="home-pic">
-            <div class="row home-msg">
+            <div class="row home-msg search-section">
                 <div class="large-8 large-centered columns">
                     <h3 class="centered"> 
                         <span>STORAGE SPACE FROM PEOPLE</span> <br/>
@@ -45,7 +42,7 @@
                     </h3>
                 </div>
             </div>
-            <div class="row">
+            <div class="row search-section">
                 <div class="small-12 small-centered large-9 large-centered columns ">
                     <form id="searchForm">
                         <div class="row">
@@ -65,11 +62,11 @@
                     </form>
                 </div>
             </div>
-            <p class="centered footer-link">Are you a space owner?
+            <p class="centered footer-link search-section">Are you a space owner?
                 <a href="#">List your space on Storagr</a>
             </p>
         </section>
-        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDszynV_XPq7Lgnmb_JAEz2QArQ7RdU5iA&sensor=true&libraries=places"></script>
         <script src="js/vendor/jquery.js"></script>
         <script src="js/foundation/foundation.js"></script>
         <script src="js/foundation/foundation.topbar.js"></script>
