@@ -9,5 +9,6 @@ $(document).ready(function () {
 	$('#searchForm').submit(function(e){
 		var query = $('#searchTextField').val();
 		console.log(query);
+		e.preventDefault();
 	});
 });
