@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+    <html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>storagr │ Rent Storage Space From People in Your Neighborhood</title>
+        <link href='http://fonts.googleapis.com/css?family=Metrophobic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="css/app.css" />
+        <link rel="stylesheet" href="css/custom.css" />
+    </head>
+    <body>
+        <div class="row">
+            <div class="contain-to-grid">
+                <nav class="top-bar">
+                    <ul class="title-area">
+                        <li class="name">
+                            <a href="index.html" class="logo">	<span></span> </a>
+                        </li>
+                        <li class="toggle-topbar menu-icon">
+                            <a href="#"><span></span> </a>
+                        </li>
+                        <section class="top-bar-section">
+                            
+                                <ul class="right">
+                                    
+                                    <li class="divider hide-for-small"></li>
+                                    <li><a href="#">List your space</a></li>
+                                    <li class="divider hide-for-small"></li>
+                                    <li><a href="#">Sign in</a></li>
+                                  
+                                </ul>
+                            
+                        </section>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <section class="home-pic">
+            <div id="result-page-pane" class="row">
+                <div class="large-4 columns">
+                    <div class="search-pane">
+                        <div class="section-container tabs" data-section>
+                            <!-- BEGIN FILTER SEARCH TAB -->
+                            <section class="section">
+                                <p class="title"><a href="#">Refine Search</a></p>
+                                <div class="content">
+                                    <div class="row search-row">
+                                        <form id="searchForm">
+                                            <div class="large-12 columns">
+                                                <div class="row collapse">
+                                                    <div class="search-wrapper">
+                                                        <div class="small-8 large-9 columns">
+                                                            <input id="searchTextField" autofocus type="text" placeholder="Toronto, ON">
+                                                        </div>
+                                                        <div class="small-4 large-3 columns">
+                                                            <a href="#"><button type="submit" id="locationQuery" class="postfix radius">Search</button></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="row sqft-slide">
+                                        <div class="large-12 columns">
+                                            <h4>Size </h4>
+                                            <input id="sq-ft" type="text" data-slider="true" data-slider-range="10, 800">
+                                        </div>
+                                    </div>
+                                    <div class="row price-slide">
+                                        <div class="large-12 columns">
+                                            <h4>Price </h4>
+                                            <input id="pricing" type="text" data-slider="true" data-slider-range="10, 300">
+                                        </div>
+                                    </div>
+                                    <div class="row neighbourhood">
+                                        <div class="large-12 columns">
+                                            <h4>Neighbourhood</h4>
+                                            <div class="row">
+                                                <div class="large-6 columns">
+                                                    <form class="custom">
+                                                      <label for="checkbox1">
+                                                        <input type="checkbox" id="checkbox1" style="display: none;">
+                                                        <span class="custom checkbox"></span> Le Plateau
+                                                      </label>
+                                                      <label for="checkbox2">
+                                                        <input type="checkbox" id="checkbox2" style="display: none;">
+                                                        <span class="custom checkbox"></span> Mile End
+                                                      </label>
+                                                      <label for="checkbox3">
+                                                        <input type="checkbox" id="checkbox3" style="display: none;">
+                                                        <span class="custom checkbox"></span> Centre Ville
+                                                      </label>
+                                                      <label for="checkbox4">
+                                                        <input type="checkbox" id="checkbox4" style="display: none;">
+                                                        <span class="custom checkbox"></span> Westmount
+                                                      </label>
+                                                      <label for="checkbox5">
+                                                        <input type="checkbox" id="checkbox5" style="display: none;">
+                                                        <span class="custom checkbox"></span> N.D.G
+                                                      </label>
+                                                    </form>
+                                                </div>
+                                                <div class="large-6 columns">
+                                                    <form class="custom">
+                                                      <label for="checkbox1">
+                                                        <input type="checkbox" id="checkbox1" style="display: none;">
+                                                        <span class="custom checkbox"></span> Roxboro
+                                                      </label>
+                                                      <label for="checkbox2">
+                                                        <input type="checkbox" id="checkbox2" style="display: none;">
+                                                        <span class="custom checkbox"></span> Pierrefonds
+                                                      </label>
+                                                      <label for="checkbox3">
+                                                        <input type="checkbox" id="checkbox3" style="display: none;">
+                                                        <span class="custom checkbox"></span> Outremont
+                                                      </label>
+                                                      <label for="checkbox4">
+                                                        <input type="checkbox" id="checkbox4" style="display: none;">
+                                                        <span class="custom checkbox"></span> T.M.R
+                                                      </label>
+                                                      <label for="checkbox5">
+                                                        <input type="checkbox" id="checkbox5" style="display: none;">
+                                                        <span class="custom checkbox"></span> Verdun
+                                                      </label>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row refine centered">
+                                        <a href="#" class="button">Refine Search</a> 
+                                    </div>
+                                    
+                                </div>
+                            </section>
+                          <!-- END FILTER SEARCH -->
+
+                          <!-- BEGIN LIST VIEW TAB -->
+                          <section class="section">
+                            <p class="title"><a href="#">List View</a></p>
+                            <div class="content list-wrapper">
+                              <div class="list-item">
+                                <div class="row list-item-title">
+                                    <div class="large-12 columns"><a href="#">Large Attic in the Plateau </a></div>
+                                </div>
+                                <div class="row">
+                                    <div class="large-5 columns">
+                                        <img src="img/attic-140x210.jpg" alt="">
+                                    </div>
+                                    <div class="large-7 columns">
+                                        <span class="price">$30</span> <span class="list-item-month">/month</span>
+                                        <span>240 Sq ft </span>
+                                        <span class="list-item-neighbourhood">Plateau Mont-Royal</span>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="list-item">
+                                <div class="row list-item-title">
+                                    <div class="large-12 columns"><a href="#">Empty Basement in NDG </a></div>
+                                </div>
+                                <div class="row">
+                                    <div class="large-5 columns">
+                                        <img src="img/basement-140x210.jpg" alt="">
+                                    </div>
+                                    <div class="large-7 columns">
+                                        <span class="price">$22</span> <span class="list-item-month">/month</span>
+                                        <span>140 Sq ft </span>
+                                        <span class="list-item-neighbourhood">N.D.G</span>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="list-item">
+                                <div class="row list-item-title">
+                                    <div class="large-12 columns"><a href="#">Indoor Parking Space in TMR</a></div>
+                                </div>
+                                <div class="row">
+                                    <div class="large-5 columns">
+                                        <img src="img/garage-140x210.jpg" alt="">
+                                    </div>
+                                    <div class="large-7 columns">
+                                        <span class="price">$50</span> <span class="list-item-month">/month</span>
+                                        <span>350 Sq ft </span>
+                                        <span class="list-item-neighbourhood">T.M.R</span>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="list-item">
+                                <div class="row list-item-title">
+                                    <div class="large-12 columns"><a href="#">Unused Bedroom in Mile End</a></div>
+                                </div>
+                                <div class="row">
+                                    <div class="large-5 columns">
+                                        <img src="img/bedroom-140x210.jpg" alt="">
+                                    </div>
+                                    <div class="large-7 columns">
+                                        <span class="price">$60</span> <span class="list-item-month">/month</span>
+                                        <span>400 Sq ft </span>
+                                        <span class="list-item-neighbourhood">Mile End</span>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="list-item">
+                                <div class="row list-item-title">
+                                    <div class="large-12 columns"><a href="#">Garage for Storage in Verdun</a></div>
+                                </div>
+                                <div class="row">
+                                    <div class="large-5 columns">
+                                        <img src="img/garage2-140x210.jpg" alt="">
+                                    </div>
+                                    <div class="large-7 columns">
+                                        <span class="price">$40</span> <span class="list-item-month">/month</span>
+                                        <span>700 Sq ft </span>
+                                        <span class="list-item-neighbourhood">Verdun</span>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
+                          <!-- END LIST VIEW -->
+                        </div>  
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="small-12 small-centered large-9 large-centered columns ">
+                    
+                </div>
+            </div>
+            <p class="centered footer-link">Are you a space owner?
+                <a href="#">List your space on Storagr</a>
+            </p>
+        </section>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+        <script src="js/vendor/jquery.js"></script>
+        <script src="js/foundation/foundation.js"></script>
+        <script src="js/foundation/foundation.forms.js"></script>
+        <script src="js/foundation/foundation.section.js"></script>
+        <script src="js/foundation/foundation.topbar.js"></script>
+        <script>
+            $(document).foundation();
+        </script>
+        <script src="js/vendor/jquery.ui.map.full.min.js"></script>
+        <script src="js/vendor/jquery.ui.map.extensions.js"></script>
+        <script src="js/simple-slider.min.js"></script>
+        <script src="js/main.js"></script>
+        <script>
+          $("#sq-ft")
+            .each(function () {
+              var input = $(this);
+              $("<span>")
+                .addClass("output").insertAfter($(this));
+            })
+            .bind("slider:ready slider:changed", function (event, data) {
+              $(this)
+                .nextAll(".output:first")
+                  .html("Minimum: " + data.value.toFixed(0) + " Sq. ft.");
+            });
+             $("#pricing")
+            .each(function () {
+              var input = $(this);
+              $("<span>")
+                .addClass("output").insertAfter($(this));
+            })
+            .bind("slider:ready slider:changed", function (event, data) {
+              $(this)
+                .nextAll(".output:first")
+                  .html("Maximum: $" + data.value.toFixed(0));
+            });
+          </script>
+    </body> 
+</html>
