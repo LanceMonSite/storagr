@@ -5084,12 +5084,17 @@ table tfoot tr td {
   max-width: 800px;
 }
 
+@font-face {
+  font-family: "Metrophobic";
+  src: url('fonts/Metrophobic-webfont.eot') format('embedded-opentype'), url('fonts/Metrophobic-webfont.svg') format('svg'), url('fonts/Metrophobic-webfont.ttf') format('truetype'), url('fonts/Metrophobic-webfont.woff') format('woff');
+}
+
 /*****
 *	
 */
 /* line 51, ../scss/app.scss */
 body {
-  background: url('../img/attic-main.jpg?1362281847') no-repeat center center fixed;
+  background: url('../img/attic-main.jpg?1362281847') no-repeat center -222px fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -5247,47 +5252,38 @@ h1, h3, h2 {
 
 @media only screen and (min-width: 58.75em) {
   /* line 143, ../scss/app.scss */
-  body {
-    background: url('../img/attic-main.jpg?1362281847') no-repeat center -310px fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-
-  /* line 147, ../scss/app.scss */
   .home-msg {
     padding: 300px 0 0 0;
   }
 
-  /* line 150, ../scss/app.scss */
+  /* line 146, ../scss/app.scss */
   .home-pic {
     height: 660px;
     margin: 0 auto;
     width: 100%;
   }
-  /* line 155, ../scss/app.scss */
+  /* line 151, ../scss/app.scss */
   .home-pic input {
     font-size: 23px;
   }
 
-  /* line 159, ../scss/app.scss */
+  /* line 155, ../scss/app.scss */
   .top-bar-section ul {
     height: 47px !important;
     margin: 11px 0;
   }
 
-  /* line 163, ../scss/app.scss */
+  /* line 159, ../scss/app.scss */
   .top-bar-section li a:not(.button) {
     line-height: 45px;
   }
 
-  /* line 167, ../scss/app.scss */
+  /* line 163, ../scss/app.scss */
   ul li > a {
     background: #274c74 !important;
     color: white !important;
   }
-  /* line 170, ../scss/app.scss */
+  /* line 166, ../scss/app.scss */
   ul li > a:hover {
     background: #ed560a !important;
     color: white !important;
