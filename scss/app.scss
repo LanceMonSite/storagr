@@ -6,7 +6,7 @@
 
 // Import specific parts of Foundation by commenting the import "foundation"
 // and uncommenting what you want below. You must uncomment the following if customizing
-
+@include font-face("Metrophobic", font-files("Metrophobic-webfont.eot", "Metrophobic-webfont.svg", "Metrophobic-webfont.ttf", "Metrophobic-webfont.woff"));
 $topbar-dropdown-bg: #274C74;
 $topbar-link-color: #fff;
 // @import "foundation/foundation-global";
@@ -49,7 +49,7 @@ $topbar-link-color: #fff;
 *	
 */
 body{
-	background: image-url('attic-main.jpg') no-repeat center center fixed;
+	background: image-url('attic-main.jpg') no-repeat center -222px fixed;
 	@include background-size(cover);
 }
 h1, h3, h2{
@@ -140,10 +140,6 @@ h1, h3, h2{
 	}
 }
 @media #{$topbar-media-query} {
-	body{
-	background: image-url('attic-main.jpg') no-repeat center -310px fixed;
-	@include background-size(cover);
-	}
 	.home-msg{
 	padding: 300px 0 0 0;
 	}
