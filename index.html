@@ -70,11 +70,37 @@
         <script src="js/vendor/jquery.js"></script>
         <script src="js/foundation/foundation.js"></script>
         <script src="js/foundation/foundation.topbar.js"></script>
+        <script src="js/foundation/foundation.forms.js"></script>
+        <script src="js/foundation/foundation.section.js"></script>
         <script>
             $(document).foundation();
         </script>
         <script src="js/vendor/jquery.ui.map.full.min.js"></script>
         <script src="js/vendor/jquery.ui.map.extensions.js"></script>
         <script src="js/main.js"></script>
+        <script>
+          $("#sq-ft")
+            .each(function () {
+              var input = $(this);
+              $("<span>")
+                .addClass("output").insertAfter($(this));
+            })
+            .bind("slider:ready slider:changed", function (event, data) {
+              $(this)
+                .nextAll(".output:first")
+                  .html("Minimum: " + data.value.toFixed(0) + " Sq. ft.");
+            });
+             $("#pricing")
+            .each(function () {
+              var input = $(this);
+              $("<span>")
+                .addClass("output").insertAfter($(this));
+            })
+            .bind("slider:ready slider:changed", function (event, data) {
+              $(this)
+                .nextAll(".output:first")
+                  .html("Maximum: $" + data.value.toFixed(0));
+            });
+          </script>
     </body> 
 </html>
