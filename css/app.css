@@ -5094,11 +5094,7 @@ table tfoot tr td {
 */
 /* line 51, ../scss/app.scss */
 body {
-  background: url('../img/attic-main.jpg?1362281847') no-repeat center -222px fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: url('../img/attic-main.jpg?1362281847') no-repeat center center fixed;
 }
 
 /* line 55, ../scss/app.scss */
@@ -5223,69 +5219,122 @@ h1, h3, h2 {
   color: #fff;
 }
 
-/* line 123, ../scss/app.scss */
+/* line 124, ../scss/app.scss */
 .how-it-works {
   padding: 25px 0;
 }
-/* line 125, ../scss/app.scss */
+/* line 126, ../scss/app.scss */
 .how-it-works img {
   margin: 0 auto;
 }
-/* line 128, ../scss/app.scss */
+/* line 129, ../scss/app.scss */
 .how-it-works h4 {
   text-align: center;
 }
-/* line 131, ../scss/app.scss */
+/* line 132, ../scss/app.scss */
 .how-it-works p {
   text-align: center;
 }
 
-/* line 135, ../scss/app.scss */
+/* line 136, ../scss/app.scss */
 .footer-link {
   margin: 100px 0;
 }
-/* line 137, ../scss/app.scss */
+/* line 138, ../scss/app.scss */
 .footer-link a {
   text-decoration: underline;
   color: #fff;
 }
+/* line 141, ../scss/app.scss */
+.footer-link a:hover {
+  color: #ed560a;
+}
+
+/* line 146, ../scss/app.scss */
+.pac-container {
+  -webkit-transition: all 1s ease-in;
+  -moz-transition: all 1s ease-in;
+  -o-transition: all 1s ease-in;
+  transition: all 1s ease-in;
+  border: none !important;
+}
+
+/* line 151, ../scss/app.scss */
+.pac-item {
+  padding: 0.5em;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+}
+/* line 154, ../scss/app.scss */
+.pac-item:hover {
+  background: #274c74;
+  color: #fff;
+}
+/* line 158, ../scss/app.scss */
+.pac-item:active {
+  background: #ed560a;
+}
+
+/* line 162, ../scss/app.scss */
+.pac-container > .pac-item:nth-child(odd) {
+  background: rgba(236, 236, 236, 0.7);
+}
+/* line 164, ../scss/app.scss */
+.pac-container > .pac-item:nth-child(odd):hover {
+  background: #274c74;
+}
 
 @media only screen and (min-width: 58.75em) {
-  /* line 143, ../scss/app.scss */
+  /* line 169, ../scss/app.scss */
   .home-msg {
     padding: 300px 0 0 0;
   }
 
-  /* line 146, ../scss/app.scss */
+  /* line 172, ../scss/app.scss */
   .home-pic {
     height: 660px;
     margin: 0 auto;
     width: 100%;
   }
-  /* line 151, ../scss/app.scss */
+  /* line 177, ../scss/app.scss */
   .home-pic input {
     font-size: 23px;
   }
 
-  /* line 155, ../scss/app.scss */
+  /* line 181, ../scss/app.scss */
   .top-bar-section ul {
     height: 47px !important;
     margin: 11px 0;
   }
 
-  /* line 159, ../scss/app.scss */
+  /* line 185, ../scss/app.scss */
   .top-bar-section li a:not(.button) {
     line-height: 45px;
   }
 
-  /* line 163, ../scss/app.scss */
+  /* line 189, ../scss/app.scss */
   ul li > a {
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
     background: #274c74 !important;
     color: white !important;
   }
-  /* line 166, ../scss/app.scss */
+  /* line 193, ../scss/app.scss */
   ul li > a:hover {
     background: #ed560a !important;
     color: white !important;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  /* line 201, ../scss/app.scss */
+  body {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   }
 }

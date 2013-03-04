@@ -49,8 +49,8 @@ $topbar-link-color: #fff;
 *	
 */
 body{
-	background: image-url('attic-main.jpg') no-repeat center -222px fixed;
-	@include background-size(cover);
+	background: image-url('attic-main.jpg') no-repeat center center fixed;
+
 }
 h1, h3, h2{
 	font-family:  $body-font-family;
@@ -119,6 +119,7 @@ h1, h3, h2{
 	background-color: rgba(#edb90a, 0.8);
 	padding: 0 3px;
 	color: #fff;
+	
 }
 .how-it-works{
 	padding: 25px 0;
@@ -137,6 +138,31 @@ h1, h3, h2{
 	a{
 		text-decoration: underline;
 		color: #fff;
+		&:hover{
+			color: $primary-color;
+		}
+	}
+}
+.pac-container{
+	@include transition(all 1s ease-in);
+	border: none !important;
+
+}
+.pac-item{
+	padding: 0.5em;
+	@include transition(all 0.1s ease-in);
+	&:hover{
+		background: $topbar-dropdown-bg;
+		color: #fff;
+	}
+	&:active{
+		background: $primary-color;
+	}
+}
+.pac-container > .pac-item:nth-child(odd){
+	background: rgba(#ececec, 0.7);
+	&:hover{
+		background: $topbar-dropdown-bg;
 	}
 }
 @media #{$topbar-media-query} {
@@ -161,6 +187,7 @@ h1, h3, h2{
 	}
 	ul li{
 	& > a{
+		@include transition(all 0.2s ease-in);
 		background: $topbar-dropdown-bg !important;
 		color: $topbar-link-color !important;
 		&:hover{
@@ -170,3 +197,9 @@ h1, h3, h2{
 	}
 }
 }
+@media only screen and (min-width: 1600px){
+	body{
+		@include background-size(cover);
+	}
+}
+		
