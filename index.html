@@ -33,6 +33,7 @@
                 </nav>
             </div>
         </div>
+        <div id="res"></div>
         <section class="home-pic">
             <div class="row home-msg search-section">
                 <div class="large-8 large-centered columns">
@@ -77,30 +78,7 @@
         </script>
         <script src="js/vendor/jquery.ui.map.full.min.js"></script>
         <script src="js/vendor/jquery.ui.map.extensions.js"></script>
+        <script src="js/simple-slider.min.js"></script>
         <script src="js/main.js"></script>
-        <script>
-          $("#sq-ft")
-            .each(function () {
-              var input = $(this);
-              $("<span>")
-                .addClass("output").insertAfter($(this));
-            })
-            .bind("slider:ready slider:changed", function (event, data) {
-              $(this)
-                .nextAll(".output:first")
-                  .html("Minimum: " + data.value.toFixed(0) + " Sq. ft.");
-            });
-             $("#pricing")
-            .each(function () {
-              var input = $(this);
-              $("<span>")
-                .addClass("output").insertAfter($(this));
-            })
-            .bind("slider:ready slider:changed", function (event, data) {
-              $(this)
-                .nextAll(".output:first")
-                  .html("Maximum: $" + data.value.toFixed(0));
-            });
-          </script>
     </body> 
 </html>
