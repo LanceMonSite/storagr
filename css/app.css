@@ -5292,66 +5292,70 @@ h1, h3, h2 {
 }
 
 /* line 171, ../scss/app.scss */
+#result-page-pane {
+  width: 345px;
+}
+
+/* line 174, ../scss/app.scss */
 .search-pane {
-  background: none repeat scroll 0 0 #edb90a;
   height: 400px;
   margin-left: -0.9375em;
 }
-/* line 175, ../scss/app.scss */
+/* line 177, ../scss/app.scss */
 .search-pane input {
   font-size: 16px !important;
 }
-/* line 178, ../scss/app.scss */
+/* line 180, ../scss/app.scss */
 .search-pane .postfix.radius {
   font-size: 16px !important;
   padding: 10px 0 !important;
 }
 
-/* line 183, ../scss/app.scss */
+/* line 185, ../scss/app.scss */
 .title {
   text-align: center;
 }
 
-/* line 186, ../scss/app.scss */
+/* line 188, ../scss/app.scss */
 .section-container.tabs section .title, .section-container.tabs .section .title {
   width: 50% !important;
   top: 0 !important;
 }
 
-/* line 191, ../scss/app.scss */
+/* line 193, ../scss/app.scss */
 .row.price-slide, .row.refine, .row.sqft-slide, .row.search-row {
   text-align: center;
   border-bottom: 2px solid #ececec;
   padding: 10px;
 }
 
-/* line 196, ../scss/app.scss */
+/* line 198, ../scss/app.scss */
 .row.neighbourhood {
   border-bottom: 2px solid #ececec;
   padding: 10px !important;
 }
-/* line 199, ../scss/app.scss */
+/* line 201, ../scss/app.scss */
 .row.neighbourhood h4 {
   text-align: center;
 }
 
-/* line 203, ../scss/app.scss */
+/* line 205, ../scss/app.scss */
 .row.refine {
   border-bottom: none;
 }
 
-/* line 213, ../scss/app.scss */
+/* line 215, ../scss/app.scss */
 .custom label {
   padding: 2px;
 }
 
 /**JQUERY SLIDER*/
-/* line 218, ../scss/app.scss */
+/* line 220, ../scss/app.scss */
 .slider {
   width: auto;
 }
 
-/* line 222, ../scss/app.scss */
+/* line 224, ../scss/app.scss */
 .slider > .dragger {
   background: #8DCA09;
   background: -webkit-linear-gradient(top, #8dca09, #72a307);
@@ -5368,12 +5372,12 @@ h1, h3, h2 {
   height: 16px;
 }
 
-/* line 241, ../scss/app.scss */
+/* line 243, ../scss/app.scss */
 .slider > .dragger:hover {
   background: -webkit-linear-gradient(top, #8dca09, #8dca09);
 }
 
-/* line 245, ../scss/app.scss */
+/* line 247, ../scss/app.scss */
 .slider > .track {
   background: #ccc;
   background: -webkit-linear-gradient(top, #bbbbbb, #dddddd);
@@ -5389,36 +5393,42 @@ h1, h3, h2 {
   height: 4px;
 }
 
-/* line 262, ../scss/app.scss */
+/* line 264, ../scss/app.scss */
 .output {
   margin: 0 auto;
 }
 
 /** LIST VIEW **/
-/* line 266, ../scss/app.scss */
+/* line 268, ../scss/app.scss */
+.list-wrapper {
+  height: 519px;
+  overflow: hidden;
+}
+
+/* line 272, ../scss/app.scss */
 .list-item {
   border-bottom: 1px solid gainsboro;
   padding: 10px 0 !important;
 }
 
-/* line 270, ../scss/app.scss */
+/* line 276, ../scss/app.scss */
 .list-item span {
   display: block;
   padding: 3px 0;
 }
 
-/* line 274, ../scss/app.scss */
+/* line 280, ../scss/app.scss */
 .list-item-month {
   display: inline !important;
 }
 
-/* line 277, ../scss/app.scss */
+/* line 283, ../scss/app.scss */
 .row.list-item-title {
   margin-bottom: 10px;
   font-size: 18px;
 }
 
-/* line 281, ../scss/app.scss */
+/* line 287, ../scss/app.scss */
 .price {
   display: inline !important;
   font-size: 30px;
@@ -5426,34 +5436,34 @@ h1, h3, h2 {
 
 /** END JQUERY SLIDER **/
 @media only screen and (min-width: 58.75em) {
-  /* line 288, ../scss/app.scss */
+  /* line 294, ../scss/app.scss */
   .home-msg {
     padding: 300px 0 0 0;
   }
 
-  /* line 291, ../scss/app.scss */
+  /* line 297, ../scss/app.scss */
   .home-pic {
     height: 660px;
     margin: 0 auto;
     width: 100%;
   }
-  /* line 296, ../scss/app.scss */
+  /* line 302, ../scss/app.scss */
   .home-pic input {
     font-size: 23px;
   }
 
-  /* line 300, ../scss/app.scss */
+  /* line 306, ../scss/app.scss */
   .top-bar-section ul {
     height: 47px !important;
     margin: 11px 0;
   }
 
-  /* line 304, ../scss/app.scss */
+  /* line 310, ../scss/app.scss */
   .top-bar-section li a:not(.button) {
     line-height: 45px;
   }
 
-  /* line 308, ../scss/app.scss */
+  /* line 314, ../scss/app.scss */
   ul li > a {
     -webkit-transition: all 0.2s ease-in;
     -moz-transition: all 0.2s ease-in;
@@ -5462,14 +5472,14 @@ h1, h3, h2 {
     background: #274c74 !important;
     color: white !important;
   }
-  /* line 312, ../scss/app.scss */
+  /* line 318, ../scss/app.scss */
   ul li > a:hover {
     background: #ed560a !important;
     color: white !important;
   }
 }
 @media only screen and (min-width: 1600px) {
-  /* line 320, ../scss/app.scss */
+  /* line 326, ../scss/app.scss */
   body {
     -webkit-background-size: cover;
     -moz-background-size: cover;

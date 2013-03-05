@@ -168,8 +168,10 @@ h1, h3, h2{
 		background: $topbar-dropdown-bg;
 	}
 }
+#result-page-pane{
+	width: 345px;
+}
 .search-pane {
-    background: none repeat scroll 0 0 #edb90a;
     height: 400px;
     margin-left: -0.9375em;
     	input{
@@ -263,6 +265,10 @@ h1, h3, h2{
 	margin: 0 auto;
 }
 /** LIST VIEW **/
+.list-wrapper {
+    height: 519px;
+    overflow: hidden;
+}
 .list-item {
     border-bottom: 1px solid #DCDCDC;
     padding: 10px 0 !important;
