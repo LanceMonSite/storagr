@@ -1,5 +1,4 @@
 $(document).ready(function () {
-	var j = 0;
     var baseRef = new Firebase('https://storagr.firebaseio.com/');
     var markersRef = new Firebase('https://storagr.firebaseio.com/markers');
 	var $mapNode = $('<div id="map_canvas"></div>');
@@ -12,9 +11,8 @@ $(document).ready(function () {
 
 	$('#searchForm').submit(function(e) {
 		var query = $('#searchTextField').val();
-		$('.search-section').fadeOut('fast', function() {
-			intializeMap(query);
-		});
+		$('.search-section').hide();
+		intializeMap(query);
 		e.preventDefault();
 	});
 
@@ -30,7 +28,9 @@ $(document).ready(function () {
 		resizeMap();
 	});
 
-    function addMarkerLive(lat, lng, pan2, content) {
+	function addMarkerLive(childSnapshot) {
+		var location = childSnapshot.val();
+		var lat = location.lat, lng = location.lng, panTo = location.panTo, content = location.content;
         var clientPosition = new google.maps.LatLng(lat, lng);
         $mapNode.gmap('addMarker', {
             'position': clientPosition,
@@ -38,7 +38,6 @@ $(document).ready(function () {
         }).click(function(){
 			$('#map_canvas').gmap('openInfoWindow', {'content': content}, this);
         });
-        console.log(content);
     }
 
     function intializeMap(query) {
@@ -53,19 +52,41 @@ $(document).ready(function () {
 		resizeMap();
 
 		baseRef.once('child_added', function (snapshot) {
-			if (j >= 1)
-				return false;
-			j++;
 			var i = 0;
 			snapshot.forEach(function (childSnapshot) {
 				i++;
-				setTimeout(preAdd(childSnapshot), 200 * i);
+				setTimeout(function(){
+					addMarkerLive(childSnapshot);
+				}, 200 * i);
 			});
 		});
 
-		function preAdd(childSnapshot) {
-			var location = childSnapshot.val();
-			addMarkerLive(location.lat, location.lng, location.panTo, location.content);
-		}
+		$('#res').load('/mtl-result.html');
     }
+
+  //   $('#res').on('DOMNodeInserted', '#result-page-pane', function(){
+  //   	console.log("SD");
+		// $("#sq-ft")
+  //       .each(function () {
+  //         var input = $(this);
+  //         $("<span>")
+  //           .addClass("output").insertAfter($(this));
+  //       })
+  //       .bind("slider:ready slider:changed", function (event, data) {
+  //         $(this)
+  //           .nextAll(".output:first")
+  //             .html("Minimum: " + data.value.toFixed(0) + " Sq. ft.");
+  //       });
+  //        $("#pricing")
+  //       .each(function () {
+  //         var input = $(this);
+  //         $("<span>")
+  //           .addClass("output").insertAfter($(this));
+  //       })
+  //       .bind("slider:ready slider:changed", function (event, data) {
+  //         $(this)
+  //           .nextAll(".output:first")
+  //             .html("Maximum: $" + data.value.toFixed(0));
+  //       });
+  //   });
 });
